@@ -1,0 +1,149 @@
+@import 'normolize'
+@import 'fonts'
+@import 'elements'
+
+$org: #FFA500
+
+.container
+    max-width: 500px
+    padding: 40px 15px
+    margin: 0 auto 20px
+
+.flex
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+
+.item
+    padding: 20px
+    align-items: flex-start
+    border-radius: 10px
+    margin: 0 auto 20px
+    box-shadow: 0 4px 10px 0px rgba(0, 0, 0, .1)
+    &-header
+        margin-bottom: 10px
+
+    &-img
+        display: block
+        max-width: 300px
+        margin: 0 auto
+        margin-bottom: 15px
+        img
+            display: block
+            width: 100%
+            max-height: 100px
+            object-fit: contain
+            box-shadow: 0 2px 5px 0px rgba(0, 0, 0, .1)
+            border-radius: 7px
+
+    &-title
+        width: 50%
+
+    &-buttons
+        width: 100%
+        text-align: center
+        a, button
+            width: 49%
+
+    &-payments
+        margin-bottom: 5px
+        justify-content: flex-start
+        gap: 5px
+        img
+            max-height: 18px
+
+    &-stars
+        display: flex
+        vertical-align: middle
+        position: relative
+        margin-bottom: 5px
+        i
+            width: 18px
+            height: 18px
+            vertical-align: middle
+            display: inline-block
+            background-image: url('../img/st-0.svg')
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: contain
+            color: #eee
+            margin: 0 1px
+            &:nth-child(1)
+                order: 4
+            &:nth-child(2)
+                order: 3
+            &:nth-child(3)
+                order: 2
+            &:nth-child(4)
+                order: 1
+            &:nth-child(5)
+                order: 0
+            &:nth-child(1).active
+                background-image: url('../img/st-f.svg')
+                & ~ i
+                    background-image: url('../img/st-f.svg')
+            &:nth-child(2).active
+                background-image: url('../img/st-f.svg')
+                & ~ i
+                    background-image: url('../img/st-f.svg')
+            &:nth-child(3).active
+                background-image: url('../img/st-f.svg')
+                & ~ i
+                    background-image: url('../img/st-f.svg')
+            &:nth-child(4).active
+                background-image: url('../img/st-f.svg')
+                & ~ i
+                    background-image: url('../img/st-f.svg')
+            &:nth-child(5).active
+                background-image: url('../img/st-f.svg')
+                & ~ i
+                    background-image: url('../img/st-f.svg')
+
+    &__stace
+        font-size: 14px
+        margin-bottom: 8px
+        color: rgba(0, 0, 0, .4)
+        b
+            color: rgba(0, 0, 0, 1)
+            font-weight: normal
+
+    &__heading
+        font-weight: bold
+        margin-bottom: 2px
+
+    &__btn
+        width: 100%
+        margin-top: 15px
+        display: inline-block
+        font-size: 16px
+        padding: 8px 10px 7px
+        background-color: $org
+        border-radius: 7px
+        &.--black
+            background-color: #000
+
+    &__link
+        margin-top: 15px
+        padding: 8px 0px 7px
+        // line-height: 10%
+        width: 49%
+        display: inline-block
+        color: $org
+        img
+            display: inline-block
+            height: 10px
+            vertical-align: middle
+            margin: 0 2px
+
+        &.--black
+            color: #000
+
+    &.flex
+        .item
+            &-img
+                width: 42%
+                margin: 0
+                max-width: 200px
+                img
+                    max-height: 80px
